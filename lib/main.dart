@@ -1,10 +1,28 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'
+    show
+        AppBar,
+        BuildContext,
+        Center,
+        Colors,
+        FloatingActionButton,
+        Icon,
+        Icons,
+        Key,
+        MaterialApp,
+        Scaffold,
+        State,
+        StatefulWidget,
+        StatelessWidget,
+        Text,
+        ThemeData,
+        Widget,
+        runApp;
 
 void main() {
-  runApp(new MyApp());
+  runApp(new ConstraintsDemoApp());
 }
 
-class MyApp extends StatelessWidget {
+class ConstraintsDemoApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
