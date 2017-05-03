@@ -4,14 +4,9 @@ import 'package:flutter/material.dart'
         BuildContext,
         Center,
         Colors,
-        FloatingActionButton,
-        Icon,
-        Icons,
         Key,
         MaterialApp,
         Scaffold,
-        State,
-        StatefulWidget,
         StatelessWidget,
         Text,
         ThemeData,
@@ -45,7 +40,7 @@ class ConstraintsDemoApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful,
@@ -59,24 +54,7 @@ class MyHomePage extends StatefulWidget {
 
   final String title;
 
-  @override
-  _MyHomePageState createState() => new _MyHomePageState();
-}
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that
-      // something has changed in this State, which causes it to rerun
-      // the build method below so that the display can reflect the
-      // updated values. If we changed _counter without calling
-      // setState(), then the build method would not be called again,
-      // and so nothing would appear to happen.
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -91,18 +69,13 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that
         // was created by the App.build method, and use it to set
         // our appbar title.
-        title: new Text(widget.title),
+        title: new Text(title),
       ),
       body: new Center(
         child: new Text(
-          'Button tapped $_counter time${ _counter == 1 ? '' : 's' }.',
+          'Constraints everywhere!',
         ),
       ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: new Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
